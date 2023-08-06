@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> 삼성 무풍당당 페스타 </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .responsive {
+            width: 100%;
+            max-width: 720px;
+            display: block;
+            margin: auto;
+        }
+
+        .slideshow-container {
+            max-width: 720px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+            max-width: 720px;
+            height: auto;
+        }
+
+      
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 640px; 
+            margin: auto;
+        }
+
+       
+        .video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 360px; 
+        }
+
+        
+        .bg-image {
+            position: relative;
+            width: 100%;
+            max-width: 720px;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <img src="main.jpg" class="responsive">
+    <img src="banner.jpg" class="responsive">
+    <a href="https://www.samsung.com/sec/air-conditioners/package-af18cx839wsr-d2c/AF18CX839WSRT/">
+        <img src="best1.jpg" class="responsive" alt="추천 상품1">
+      </a>
+      <a href="https://www.samsung.com/sec/air-conditioners/package-af19b7932rfr-d2c/AF19B7932RFRT/">
+        <img src="best2.jpg" class="responsive" alt="추천 상품1">
+      </a>
+    
+
+ 
+    <div class="slideshow-container">
+        <img class="mySlides" src="ani1.gif" alt="Image 1">
+        <img class="mySlides" src="ani2.gif" alt="Image 2">
+        <img class="mySlides" src="ani3.gif" alt="Image 3">
+    </div>
+
+    <div class="video-container">
+        <iframe class="video" width="640" height="360" src="https://www.youtube.com/embed/Xn3vMnHVZ9w?list=PLV5m8T5m0A6aYujz61xcAdE0TCrLIzhmo&index=9" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <img src="bg.jpg" class="responsive">
+    <img src="event1.jpg" class="responsive">
+    <img src="event2.jpg" class="responsive">
+    <img src="read.jpg" class="responsive">
+
+    <script>
+        // 자동 슬라이드 쇼 함수
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 4200); 
+        }
+    </script>
+</body>
+</html>
